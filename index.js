@@ -4,6 +4,6 @@
 import React from 'react';
 import {AppRegistry} from 'react-native';
 import {name as appName} from './app.json';
-import BoardVieja from './src/component/tablero-vieja';
+import MemoryTwo from './src/component/tableros/MemoryTwo';
 
-AppRegistry.registerComponent(appName, () => BoardVieja );
+AppRegistry.registerComponent(appName, () => MemoryTwo);

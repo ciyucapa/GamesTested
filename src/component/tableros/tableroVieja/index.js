@@ -9,7 +9,7 @@ const BoardVieja = () => {
     const [reseat, setReseat] = useState(false);
     const [posicion, setPosicion] = useState([
         [1, 2],
-        [1, 2]
+        [2, 1]
     ])
 
     useEffect(() => {
@@ -17,7 +17,7 @@ const BoardVieja = () => {
     }, [reseat])
 
     useEffect(() => {
-        if(){
+        if(posicion[0][0] === posicion[1][1]){
 
         }
     }, [posicion])
@@ -38,6 +38,11 @@ const BoardVieja = () => {
                 <Image source={Assets.images.play} styles={styles.imageBoxBoard} />
             </Text>
             <View styles={styles.oneBox}>
+
+                {
+                    posicion.map((matriz))
+                }
+
                 <Celda onPress={ultimoToken} esElUltimoToken={playerOne} isReseat={reseat} fila={0} columna={0} />
                 <Celda onPress={ultimoToken} esElUltimoToken={playerOne} isReseat={reseat} fila={0} columna={0} />
                 <Celda onPress={ultimoToken} esElUltimoToken={playerOne} isReseat={reseat} fila={0} columna={0} />
