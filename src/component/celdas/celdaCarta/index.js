@@ -3,6 +3,7 @@ import {Image, TouchableOpacity, StyleSheet} from 'react-native';
 import PropTypes from 'prop-types';
 
 import {Assets} from '../../../resources';
+
 export const MOON_TYPE = 'Cell/MOON_TYPE';
 export const HEART_TYPE = 'Cell/HEART_TYPE';
 
@@ -23,6 +24,7 @@ const Cell = (props) => {
            setMostrarPermanente(true);
        } else {
            if (!mostrarPermanente) {
+
                setMostrarCarta(false);
            }
        }
@@ -47,7 +49,7 @@ const Cell = (props) => {
   return (
         <TouchableOpacity onPress={handlePress} style={styles.boxTouch}>
             { mostrarCarta && (
-                <Image source={type === MOON_TYPE ? Assets.images.moon : Assets.images.heart} style={[styles.boxImage, mostrarPermanente ? {opacity: .5} : {}]} />)
+                <Image source={type === MOON_TYPE ? Assets.images.moon : Assets.images.heart} style={[mostrarPermanente ? styles.boxImageCambia : styles.boxImage]} />)
             }
         </TouchableOpacity>
   );
@@ -73,6 +75,12 @@ const styles = StyleSheet.create({
             height: 50,
             resizeMode: 'contain',
         },
+        boxImageCambia: {
+        width: 50,
+        height: 50,
+        resizeMode: 'contain',
+        backgroundColor: 'green'
+    },
 });
 
 Cell.propTypes = {

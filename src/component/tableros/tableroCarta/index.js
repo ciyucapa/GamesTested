@@ -3,6 +3,7 @@ import {View, Button, Text, StyleSheet} from 'react-native';
 import Cell from '../../celdas/celdaCarta';
 
 import {HEART_TYPE} from '../../celdas/celdaCarta';
+
 const Board = () => {
     const [lasImagenesSonIguales, setImagenesIguales] = useState(null);
     const [imagenSeleccionada, setImagenSeleccionada] = useState(null);

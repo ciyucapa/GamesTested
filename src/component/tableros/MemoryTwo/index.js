@@ -119,6 +119,7 @@ const MemoryTwo = () => {
             },
         ],
     ]);
+
     const [step, setStep] = useState(1);
     const [isSearch, setSearch] = useState(false);
 
